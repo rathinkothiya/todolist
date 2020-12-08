@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({
 
 }));
 
-const Port = 3000 || process.env.PORT;
+const Port =  process.env.PORT  || 3000;
 //a folder which is available to public
 app.use(express.static("public"));
 
