@@ -8,8 +8,10 @@ const app = express();
 
 app.use(bodyParser.urlencoded({
   extended: true
+
 }));
 
+const Port = 3000 || process.env.PORT;
 //a folder which is available to public
 app.use(express.static("public"));
 
@@ -179,6 +181,6 @@ app.post('/delete', function(req, res) {
 });
 
 
-app.listen(3000, function() {
+app.listen(Port, function() {
   console.log("Listening to port 3000");
 });
